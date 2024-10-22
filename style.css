@@ -1,0 +1,57 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+/* Contenedor de la caja de inicio de sesión */
+.container {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 300px; /* Ancho fijo para la caja */
+    text-align: center; /* Centrar texto */
+}
+
+/* Encabezados */
+h1 {
+    color: #4CAF50;
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Estilo para las etiquetas y entradas */
+label {
+    display: block; /* Asegura que cada etiqueta ocupe una línea */
+    margin: 10px 0 5px; /* Espaciado */
+}
+
+input {
+    width: 80%; /* Ancho completo */
+    padding: 10px;
+    margin-bottom: 15px; /* Espacio entre campos */
+    border: 1px solid #ddd;
+    border-radius: 4px; /* Esquinas redondeadas */
+}
+
+/* Estilo para botones */
+button {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el ratón */
+}
