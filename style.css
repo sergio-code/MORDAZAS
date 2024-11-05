@@ -23,10 +23,15 @@ body {
 
 /* Encabezados */
 h1 {
-    color: #2f11d7;
+    color: #6e58e9;
     margin-bottom: 20px; /* Espacio debajo del título */
 }
 
+h2{
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
+}
 /* Estilo para las etiquetas y entradas */
 label {
     display: block; /* Asegura que cada etiqueta ocupe una línea */
@@ -37,7 +42,7 @@ input {
     width: 80%; /* Ancho completo */
     padding: 10px;
     margin-bottom: 15px; /* Espacio entre campos */
-    border: 1px solid #ddd;
+    border: 1px solid #d23636;
     border-radius: 4px; /* Esquinas redondeadas */
 }
 
