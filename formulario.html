@@ -5,25 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Ingrese a nuestro sitio</title>
     <script src ="varios.js" defer> </script> 
+    <title>Ingrese a nuestro sitio</title>    
 </head>
 <body>
     <div class="container">
         <h1>MORDAZAS</h1>
         <h2>FORMULARIO</h2>
         <!-- action="bienvenido.html" -->
-        <form id="mordazas" onsubmit="iniciarFormulario()">
+        <form id="mordazas">
             <div>
                 <label for="MAQUINA">Ingrese numero de maquina:</label>
-                <input type="maquina" id="maquina" >
+                <input id="maquina" >
             </div>
             <div>
-                <label for="plato">Ingrese numero de Operacion:</label>
-                <input type="plato" id="plato" >
+                <label for="operacion">Ingrese numero de Operacion:</label>
+                <input id="plato" >
             </div>
             <label for="plato">Ingrese modelo:</label>
-                <input type="modelo" id="modelo" >
+                <input id="modelo" >
             <button type="submit">Iniciar sesion</button>
         </form>
     </div>
