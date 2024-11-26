@@ -20,7 +20,6 @@ function enviarDatos(event) {
     // objeto con los datos
     const data = { maquina, operacion, modelo };
     console.log(data);  // Mostrar los datos en la consola
-
            
     // Enviar los datos al servidor
     fetch('/busquedaRepuesto', {
@@ -40,7 +39,7 @@ function enviarDatos(event) {
         window.location.href = '/bienvenido';
     })
     .catch(error => {
-        mostrarErrorModal(error.message);
+        mostrarErrorModal(error.message);   
     });
 }
 
