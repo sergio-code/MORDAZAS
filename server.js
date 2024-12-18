@@ -15,9 +15,11 @@ app.get('/inicio', (req, res) => {
 });
 // Manejar la solicitud POST para /logueo
 app.post('/busquedaRepuesto', async (req, res) => {
-  const { maquina, operacion, modelo} = req.body;
+  const {maquina, operacion, modelo} = req.body;
 
-try {
+  console.log(maquina, operacion, modelo);
+
+  try {
       // Llamar a la función de action.js para verificar las credenciales
       const busquedaRepuesto = await busquedaRepuesto(maquina, operacion, modelo);
 
