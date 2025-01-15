@@ -20,7 +20,7 @@ function enviarDatos(event) {
     // objeto con los datos
     const data = {maquina, operacion, modelo};
     console.log(data);  // Mostrar los datos en la consola
-           
+
     // Enviar los datos al servidor
     fetch('/busquedaRepuesto', {
         method: 'POST',
@@ -29,18 +29,18 @@ function enviarDatos(event) {
         },
         body: JSON.stringify(data), // Convertir el objeto en una cadena JSON
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Credenciales incorrectas');
-        }
-        return response.text();
-    })
-    .then(data => {
-        window.location.href = '/bienvenido';
-    })
-    .catch(error => {
-        mostrarErrorModal(error.message);   
-    });
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Credenciales incorrectas');
+            }
+            return response.text();
+        })
+        .then(data => {
+            window.location.href = '/bienvenido';
+        })
+        .catch(error => {
+            mostrarErrorModal(error.message);
+        });
 }
 
 // Función para mostrar el modal con el error
@@ -62,4 +62,3 @@ function volver() {
     window.history.back();
 }
 
- 
