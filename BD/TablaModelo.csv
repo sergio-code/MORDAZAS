@@ -1,9 +1,17 @@
-﻿NumMaquina;Operación;modelo266;modelo283;leyenda
-339003;10;266;283;Mueble 40 cajon 1
-339003;15;266;283;Mueble 40 cajon 2
-339004;20;266;283;Mueble 40 cajon 3
-339004;25;266;283;Mueble 40 cajon 4
-339005;10;P21;M69;Mueble 40 cajon 5
-339005;15;P21;M69;Mueble 40 cajon 6
-339006;20;P21;M69;Mueble 40 cajon 7
-339006;25;P21;M69;Mueble 40 cajon 8
+﻿NUM_MAQUINA;OPERACION;MODELO;LEYENDA
+339-003;10;266;Mueble 40 cajon 1
+339-003;10;283;Mueble 40 cajon 5
+339-003;15;266;Mueble 40 cajon 2
+339-003;15;283;Mueble 40 cajon 6
+339-004;20;266;Mueble 40 cajon 3
+339-004;20;283;Mueble 40 cajon 7
+339-004;25;266;Mueble 40 cajon 4
+339-004;25;283;Mueble 40 cajon 8
+339-005;10;P21;Mueble 40 cajon 9
+339-005;10;M69;Mueble 40 cajon 13
+339-005;15;P21;Mueble 40 cajon 10
+339-005;15;M69;Mueble 40 cajon 14
+339-006;20;P21;Mueble 40 cajon 11
+339-006;20;M69;Mueble 40 cajon 15
+339-006;25;P21;Mueble 40 cajon 12
+339-006;25;M69;Mueble 40 cajon 16
