@@ -2,7 +2,7 @@ const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
 // Ruta completa a la base de datos SQLite
-const dbPath = 'C:\\Desarrollo\\MORDAZAS\\BD\\TablaModelo.db';  // Ruta absoluta a la base de datos SQLite
+const dbPath = 'C:\\Desarrollo\\MORDAZAS\\MORDAZAS\\BD\\tablaModelo.db';  // Ruta absoluta a la base de datos SQLite
 
 function busquedaRepuesto(maquina, operacion, modelo) {
     return new Promise((resolve, reject) => {
@@ -13,7 +13,7 @@ function busquedaRepuesto(maquina, operacion, modelo) {
             }
         });
 
-        db.get('SELECT * FROM tablaModelo WHERE NumMaquina =? and Operación = ? AND modelo = ?', [maquina, operacion, modelo], (err, row) => {
+        db.get('SELECT LEYENDA FROM tablaModelo WHERE NUM_MAQUINA =? and OPERACION = ? and MODELO = ?', [maquina, operacion, modelo], (err, row) => {
             if (err) {
                 db.close();
                 return reject('Error al consultar la base de datos: ' + err.message);
