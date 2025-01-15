@@ -1,7 +1,7 @@
 // funcion para escuchar un evento
 document.addEventListener('DOMContentLoaded', iniciarFormulario);
 function iniciarFormulario() {
-    const form = document.getElementById('mordazas'); // toma el formulario por id
+    const form = document.getElementById('formConsulta'); // toma el formulario por id
     if (form) {
         form.addEventListener('submit', enviarDatos); // asocia el evento 'submit' al formulario
     }
@@ -18,9 +18,9 @@ function enviarDatos(event) {
     const modelo = document.getElementById('modelo').value;
 
     // objeto con los datos
-    const data = { maquina, operacion, modelo };
+    const data = {maquina, operacion, modelo};
     console.log(data);  // Mostrar los datos en la consola
-           
+
     // Enviar los datos al servidor
     fetch('/busquedaRepuesto', {
         method: 'POST',
@@ -29,18 +29,18 @@ function enviarDatos(event) {
         },
         body: JSON.stringify(data), // Convertir el objeto en una cadena JSON
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Credenciales incorrectas');
-        }
-        return response.text();
-    })
-    .then(data => {
-        window.location.href = '/bienvenido';
-    })
-    .catch(error => {
-        mostrarErrorModal(error.message);   
-    });
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Credenciales incorrectas');
+            }
+            return response.text();
+        })
+        .then(data => {
+            window.location.href = '/bienvenido';
+        })
+        .catch(error => {
+            mostrarErrorModal(error.message);
+        });
 }
 
 // Función para mostrar el modal con el error
@@ -62,4 +62,3 @@ function volver() {
     window.history.back();
 }
 
- 
