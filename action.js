@@ -2,7 +2,9 @@ const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
 // Ruta completa a la base de datos SQLite
-const dbPath = 'C:\\Desarrollo\\MORDAZAS\\MORDAZAS\\BD\\tablaModelo.db';  // Ruta absoluta a la base de datos SQLite
+const dbPath = 'C:\\Desarrollo\\MORDAZAS\\BD\\tablaModelo.db';  // Ruta absoluta a la base de datos SQLite
+
+//C:\Desarrollo\MORDAZAS\BD
 
 function busquedaRepuesto(maquina, operacion, modelo) {
     return new Promise((resolve, reject) => {
@@ -18,16 +20,19 @@ function busquedaRepuesto(maquina, operacion, modelo) {
                 db.close();
                 return reject('Error al consultar la base de datos: ' + err.message);
             }
-
+        
             if (row) {
-                resolve(true);
+                // Si se encuentra el valor de LEYENDA, lo devolvemos en la promesa
+                resolve(row.LEYENDA);
             } else {
-                resolve(false);
+                // Si no se encuentra, devolvemos un valor por defecto o false
+                resolve("No hay datos para lo seleccionado");
             }
-
+        
             // Cerrar la base de datos después de la consulta
             db.close();
         });
+        
     });
 }
 
