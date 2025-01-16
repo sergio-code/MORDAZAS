@@ -25,13 +25,10 @@ app.post('/busquedaRepuesto', async (req, res) => {
 
   try {
     // Llamar a la función de action.js para verificar las credenciales
-    const busqueda = await busquedaRepuesto(maquina, operacion, modelo);
+    const leyenda = await busquedaRepuesto(maquina, operacion, modelo);
 
-    if (busqueda) {
-      res.json({ message: '¡Bienvenido!' });
-    } else {
-      res.status(401).json({ message: 'datos incorrectos' });
-    }
+   // Responder con la leyenda (puede ser null) y un mensaje de éxito
+   res.json({ message: '¡Bienvenido!', leyenda: leyenda });
   } catch (error) {
     // Si hubo algún error al leer la base de datos
     console.error(error);

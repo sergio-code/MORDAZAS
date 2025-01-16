@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src ="varios.js" defer> </script> 
     <title>Ingrese a nuestro sitio</title>    
 </head>
 <body>
@@ -27,4 +26,14 @@
         </form>
     </div>
 </body>
+
+<div id="miModal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <p id="modal-message"></p> <!-- Este es el elemento que muestra el mensaje -->
+    </div>
+</div>
+
+<script src ="varios.js" defer> </script> 
+
 </html>
